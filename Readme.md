@@ -43,6 +43,6 @@ pdf 문서 참조
 - kubeadm kubelet kubectl 설치
    - version : `v1.21.1`
 - kubectl 구성 (마스터 노드만)
-- 토큰, 해쉬값 발급 (마스터 노드만)
+- token, hash 발급 (마스터 노드만)
 - 마스터, 워커 노드 조인
-- 노드 
+- 노드 조회
