@@ -11,8 +11,8 @@ AWS EC2 서버(마스터 노드 1개, 워커 노드 2개)
   - `Ubuntu Server 20.04 LTS (HVM), SSD Volume Type` 선택
 - 다음
 - 단계 2: 인스턴스 유형 선택
-  - 마스터 노드 `t3.large` 선택
-  - 워커 노드 `t2.medium` 선택
+  - 마스터 노드 `m5a.large` 선택
+  - 워커 노드 `m5a.xlarge` 선택
 - 다음 ...
 - 단계 4: 스토리지 추가
    - 볼륨 유형 : 루트
