@@ -1,0 +1,16 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: room9-ingress
+spec:
+  rules:
+  - host: api.room9.shop
+    http:
+      paths:
+      - pathType: Prefix
+        path: /
+        backend:
+          service:
+            name: room9-backend-service
+            port:
+              number: 80
