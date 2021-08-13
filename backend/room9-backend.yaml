@@ -6,13 +6,13 @@ spec:
   selector:
     matchLabels:
       name: room9-backend
-    template:
-      metadata:
-        labels:
-          name: room9-backend
-      spec:
-        containers:
-          - image: hsju0202/room9-backend:test
+  template:
+    metadata:
+      labels:
+        name: room9-backend
+    spec:
+      containers:
+        - image: hsju0202/room9-backend:test
           name: room9-backend
           ports:
             - containerPort: 8080
