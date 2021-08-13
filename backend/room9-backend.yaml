@@ -1,0 +1,50 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: room9-backend
+spec:
+  selector:
+    matchLabels:
+      name: room9-backend
+    template:
+      metadata:
+        labels:
+          name: room9-backend
+      spec:
+        containers:
+          - image: hsju0202/room9-backend:test
+          name: room9-backend
+          ports:
+            - containerPort: 8080
+              name: room9-backend
+              
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: room9-backend-service
+spec:
+  ports:
+    - port: 8080
+      targetPort: 8080
+      protocol: TCP
+  selector:
+      name: room9-backend
+     
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: room9-ingress
+spec:
+  rules:
+  - host: api.room9.shop
+    http:
+      paths:
+      - pathType: Prefix
+        path: /
+        backend:
+          service:
+            name: room9-backend-service
+            port:
+              number: 80
