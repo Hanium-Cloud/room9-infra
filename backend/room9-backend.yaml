@@ -12,7 +12,7 @@ spec:
         name: room9-backend
     spec:
       containers:
-        - image: hsju0202/room9-backend:test
+        - image: hsju0202/room9-backend:test2
           name: room9-backend
           ports:
             - containerPort: 8080
