@@ -12,8 +12,10 @@ spec:
         name: room9-backend
     spec:
       containers:
-        - image: hsju0202/room9-backend:test4
+        - image: ${{ secrets.DOCKER_USERNAME }}/room9-backend:test4
           name: room9-backend
           ports:
             - containerPort: 8080
               name: room9-backend
+      imagePullSecrets:
+        - name: regcred
