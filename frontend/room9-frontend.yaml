@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: room9-frontend
+spec:
+  selector:
+    matchLabels:
+      name: room9-frontend
+  template:
+    metadata:
+      labels:
+        name: room9-frontend
+    spec:
+      containers:
+        - image: labyu/romm9-frontend:6
+          name: room9-frontend
+          ports:
+            - containerPort: 3000
