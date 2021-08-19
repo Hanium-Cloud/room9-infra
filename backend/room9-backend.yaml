@@ -14,6 +14,7 @@ spec:
       containers:
       - name: room9-backend
         image: hsju0202/room9-backend:25
+        imagePullPolicy: IfNotPresent
         ports:
           - containerPort: 8080
       imagePullSecrets:
