@@ -16,5 +16,3 @@ spec:
         image: hsju0202/room9-backend:25
         ports:
           - containerPort: 8080
-      imagePullSecrets:
-        - name: regcred
