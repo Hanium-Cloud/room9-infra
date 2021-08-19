@@ -13,9 +13,7 @@ spec:
     spec:
       containers:
         image: hsju0202/room9-backend:22
-          name: room9-backend
           ports:
             - containerPort: 8080
-              name: room9-backend
       imagePullSecrets:
         - name: regcred
