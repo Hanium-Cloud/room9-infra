@@ -18,4 +18,4 @@ spec:
             - containerPort: 8080
           envFrom:
             - secretRef:
-              name: aws-secret
+                name: aws-secret
