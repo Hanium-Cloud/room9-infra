@@ -16,3 +16,6 @@ spec:
           image: hsju0202/room9-backend:56
           ports:
             - containerPort: 8080
+          envFrom:
+            - secretRef:
+              name: aws-secret
