@@ -13,6 +13,6 @@ spec:
     spec:
       containers:
         - name: room9-frontend
-          image: labyu/room9-frontend:27
+          image: labyu/room9-frontend:28
           ports:
             - containerPort: 3000
